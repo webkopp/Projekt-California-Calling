@@ -38,7 +38,6 @@ header {
         margin: 0 auto;
         align-items: center;
 
-
         h1 {
             @include fontstyle($fontMain, 7rem, $main-hell, 70%);
             text-align: center;
