@@ -11,9 +11,11 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Inter";
+  text-decoration: none;
 }
 
 header {
+  padding: 0 5rem;
   font-size: 1rem;
   color: white;
   background-color: black;
@@ -54,8 +56,16 @@ header aside {
   align-items: center;
   margin-top: 25%;
 }
+header aside button {
+  border: 0.1rem solid white;
+  background-color: black;
+  padding: 1rem 2rem;
+}
+header aside a {
+  color: white;
+}
 
-p {
+p, a {
   font-family: "WorkSans";
   font-size: 1rem;
 }
