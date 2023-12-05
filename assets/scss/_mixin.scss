@@ -9,3 +9,7 @@
     background-color: $background;
 }
 
+@mixin sectionStyleDark ($color, $background) {
+    color: $color;
+    background-color: $background;
+}

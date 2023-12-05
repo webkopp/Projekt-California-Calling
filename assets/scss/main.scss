@@ -31,7 +31,7 @@ header {
         }
     }
     
-    @include mixi.headerStyle(1rem, white, black);
+    @include mixi.headerStyle (1rem, white, black);
     height: 100vh;
     article {
         display: flex;
@@ -61,6 +61,9 @@ header {
             background-color: black;
             padding: 1rem 2rem;
         }
+        button:hover {
+            background-color: rgba(100, 100, 100, 0.5);
+        }
         a {
             color: white;
         }
@@ -74,6 +77,53 @@ p, a {
 
 // main
 // sec1
+
+.sec1__story {
+    @include mixi.sectionStyleDark (white, black);
+    padding: 0 5rem;
+
+    h1 {
+        font-size: 5rem;
+        padding-right: 17rem;
+        padding-top: 10rem;
+    }
+
+    div {
+        display: flex;
+        align-items: flex-end;
+        article {
+            width: 50%;
+        }
+        figure img {
+            width: 150%;
+        }
+        h2 {
+            font-size: 4rem;
+        }
+        p {
+            padding-top: 1rem;
+        }
+        h2:nth-of-type(3) {
+            padding-bottom: 5rem;
+        }
+    }
+}
+
+// sec2
+
+.sec2__action {
+    position: relative;
+
+    figure img {
+        width: 20%;
+        position: absolute;
+    }
+
+    h3 {
+        font-size: 4rem;
+
+    }
+}
 
 
 

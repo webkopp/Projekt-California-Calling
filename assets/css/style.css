@@ -61,6 +61,9 @@ header aside button {
   background-color: black;
   padding: 1rem 2rem;
 }
+header aside button:hover {
+  background-color: rgba(100, 100, 100, 0.5);
+}
 header aside a {
   color: white;
 }
@@ -68,6 +71,47 @@ header aside a {
 p, a {
   font-family: "WorkSans";
   font-size: 1rem;
+}
+
+.sec1__story {
+  color: white;
+  background-color: black;
+  padding: 0 5rem;
+}
+.sec1__story h1 {
+  font-size: 5rem;
+  padding-right: 17rem;
+  padding-top: 10rem;
+}
+.sec1__story div {
+  display: flex;
+  align-items: flex-end;
+}
+.sec1__story div article {
+  width: 50%;
+}
+.sec1__story div figure img {
+  width: 150%;
+}
+.sec1__story div h2 {
+  font-size: 4rem;
+}
+.sec1__story div p {
+  padding-top: 1rem;
+}
+.sec1__story div h2:nth-of-type(3) {
+  padding-bottom: 5rem;
+}
+
+.sec2__action {
+  position: relative;
+}
+.sec2__action figure img {
+  width: 20%;
+  position: absolute;
+}
+.sec2__action h3 {
+  font-size: 4rem;
 }
 
 /*# sourceMappingURL=style.css.map */
