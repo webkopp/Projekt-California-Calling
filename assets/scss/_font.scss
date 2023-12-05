@@ -1,9 +1,11 @@
 @font-face {
     font-family: 'Inter';
-    src: url('../fonts/Inter-VariableFont_slnt\,wght.ttf');
+    src: url('../fonts/Inter-Regular.ttf');
 }
 
 @font-face {
     font-family: 'WorkSans';
     src: url('../fonts/WorkSans-VariableFont_wght.ttf');
 }
+
+$fontFamily: Inter;

@@ -1,31 +1,16 @@
-@charset "UTF-8";
-/* 
-In diesem Beispiel werden die Variablen $primary-color und $secondary-color, 
-die in _variables.scss definiert sind, in variables.scss importiert und in anderen Stilen im Projekt verwendet.
-*/
-/* ====== P Tag Style */
-/* Importiere das Modul 'variables' und weise ihm den Alias 'variables' zu.
-Der Alias sollte logisch benannt werden, umdas Moduls leicht identifizieren zu können. */
-/* verschiedenen Eigenschaften, die wir öfter verwenden wollen.
-    und eine "funktion", in der wir parameter übergeben wollen */
-/* ! nimt drei Argumente entgegen: $pizza, $color, $background
-    Diese Argumente werden verwendet, um den Stil für den text zu definieren. */
-/* @import "mixin"; */
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Regular.ttf");
+}
 @font-face {
   font-family: "WorkSans";
   src: url("../fonts/WorkSans-VariableFont_wght.ttf");
 }
-@font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-VariableFont_slnt,wght.ttf");
-}
-/* ========== GLOBAL STYLES ========== */
 * {
-  margin: 0;
   padding: 0;
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace, monospace;
-  font-weight: 900;
-  text-decoration: none;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Inter;
 }
 
 /*# sourceMappingURL=style.css.map */

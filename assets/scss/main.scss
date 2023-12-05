@@ -1,18 +1,16 @@
 // links
-@import 'fonts';
+@use '_font' as font;
 
-@use 'mixin' as mixi;
+@use '_mixin' as mixi;
 
-@use 'variables' as vari;
+@use '_variables' as vari;
 
 // global
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: font.$fontFamily;
+
 }
 
-html {
-    font-size: vari.$font-size;
-    @include mixi.central;
-}
