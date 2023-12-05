@@ -10,7 +10,15 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: font.$fontFamily;
-
+    font-family: $fontFine;
 }
+
+// header
+.header {
+    @include mixi.flex-center;
+
+
+    background-color: $color-black;
+}
+
 
