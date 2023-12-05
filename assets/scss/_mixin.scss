@@ -1,16 +1,10 @@
-/* verschiedenen Eigenschaften, die wir öfter verwenden wollen.
-    und eine "funktion", in der wir parameter übergeben wollen */
-    @mixin flex-center{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    /* ! nimt drei Argumente entgegen: $pizza, $color, $background
-        Diese Argumente werden verwendet, um den Stil für den text zu definieren. */
-    @mixin textStyle($pizza, $color, $background){
-        font-size: $pizza;
-        color: $color;
-        background-color: $background;
-    }
-    
+// global
+
+@use 'variables' as vari;
+@mixin flex_center_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem
+}
