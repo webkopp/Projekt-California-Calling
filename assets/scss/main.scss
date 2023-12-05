@@ -1,0 +1,19 @@
+@use 'variables' as variables; /* Importiere das Modul 'variables' und weise ihm den Alias 'variables' zu.
+Der Alias sollte logisch benannt werden, umdas Moduls leicht identifizieren zu können. */
+
+@use 'mixin' as mixins;
+
+/* @import "mixin"; */
+@import "font";
+
+
+/* ========== GLOBAL STYLES ========== */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+    "Droid Sans Mono", monospace, monospace;
+    font-weight: 900;
+    text-decoration: none;
+}
