@@ -1,139 +1,336 @@
-// links
-@use '_font' as font;
-@use '_mixin' as mixi;
-@use '_variables' as vari;
+@use "_fonts.scss" as *;
+@use "_colors" as *;
+@use "_mixin" as *;
+@use "_buttons" as *;
+@use "_keyframes" as *;
 
-// global
+
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: font.$fontHead;
-    text-decoration: none;
 }
 
 // header
+
 header {
-    padding: 0 5rem;
-
-    div {
-        width: 100%;
-        height: 150px;
-        display: flex;
-        justify-content: center;
-        span {
-            width: .7px;
-            height: 100%;
-            background-color: white;
-            display: block;
-        }
-    }
-    
-    @include mixi.headerStyle (1rem, white, black);
+    width: 100vw;
     height: 100vh;
-    article {
-        display: flex;
-        flex-direction: column;
+    background-color: $main-dark;
+    @include flexColumn;
+    justify-content: space-between;
+
+
+    .hero {
+        .line {
+            width: 1px;
+            height: 20vh;
+            background-color: $main-hell;
+            margin-bottom: 5%;
+        }
+
+        @include flexColumn;
+        gap: 5px;
+        margin: 0 auto;
         align-items: center;
-        justify-content: center;
-        h2 {
-            font-size: 3rem;
+
+
+        h1 {
+            @include fontstyle($fontMain, 7rem, $main-hell, 70%);
+            text-align: center;
+            line-height: 6rem;
         }
-        h2:nth-of-type(2) {
-            -webkit-text-stroke: 1px #fff;
-            color: hsla(0,0%,100%,0)
-        }
+
         p {
-            font-size: .7rem;
+            @include fontstyle($fontSecond, 0.8rem, $main-hell, 70%);
+            text-align: center;
+        }
+
+        span {
+            text-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white;
+            color: $main-dark;
         }
     }
 
-    aside {
-        height: 7vh;
-        display: flex;
+    nav {
+        @include flexRow;
         justify-content: space-between;
-        align-items: center;
-        margin-top: 25%;
-        button {
-            border: .1rem solid white;
-            background-color: black;
-            padding: 1rem 2rem;
-        }
-        button:hover {
-            background-color: rgba(100, 100, 100, 0.5);
-        }
-        a {
-            color: white;
-        }
+        padding: 5% 5%;
     }
-}
-
-p, a {
-    font-family: font.$fontSub;
-    font-size: 1rem;
 }
 
 // main
-// sec1
 
-.sec1__story {
-    @include mixi.sectionStyleDark (white, black);
-    padding: 0 5rem;
+.intro {
+    background-color: $main-dark;
+    width: 100vw;
+    padding: 5%;
 
-    h1 {
-        font-size: 5rem;
-        padding-right: 17rem;
-        padding-top: 10rem;
+    h2 {
+        @include fontstyle($fontMain, 6rem, $main-hell, 80%);
+    }
+}
+
+.more {
+    width: 100vw;
+    background-color: $main-dark;
+    padding: 0 5%;
+    @include flexRow;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 10%;
+    padding-bottom: 5%;
+
+    .facts {
+        h2 {
+            @include fontstyle($fontMain, 6rem, $main-hell, 80%);
+            padding-bottom: 2%;
+        }
+
+        p {
+            @include fontstyle($fontSecond, 0.8rem, $main-hell, 70%);
+        }
     }
 
-    div {
-        display: flex;
-        align-items: flex-end;
-        article {
-            width: 50%;
+    img {
+        width: 30%;
+        height: auto;
+    }
+
+}
+
+.article01 {
+    width: 100vw;
+    height: 175vh;
+    background-color: $main-dark;
+    // padding: 5%;
+
+    .articleText {
+        @include flexRow;
+        justify-content: space-between;
+        gap: 30%;
+        padding: 5%;
+
+        h3 {
+            @include fontstyle($fontMain, 5rem, $main-hell, 100%);
+            line-height: 4.4rem;
         }
-        figure img {
-            width: 150%;
+
+        p:first-of-type {
+            @include fontstyle($fontSecond, 1.5rem, $main-hell, 80%);
+            font-weight: 700;
         }
-        h2 {
-            font-size: 4rem;
+
+        p:last-of-type {
+            @include fontstyle($fontSecond, 1rem, $main-hell, 100%);
+            padding-top: 2%;
         }
-        p {
-            padding-top: 1rem;
+    }
+
+    .articlePhotos {
+        height: 90vh;
+        position: relative;
+        z-index: 1;
+
+        img:first-of-type {
+            @include imgPositionAbsolute(10%, auto, auto, 5%, 55%);
         }
-        h2:nth-of-type(3) {
-            padding-bottom: 5rem;
+
+        img:last-of-type {
+            @include imgPositionAbsolute(25%, 15%, auto, auto, 30%);
+        }
+    }
+
+}
+
+.animation {
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    top: -10%;
+    // width: 100vw;
+    height: 60vh;
+    padding: 0 0;
+
+
+    img {
+        @include imgPositionAbsolute(-30%, 5%, auto, auto, 35%);
+        animation: rotate 5s linear infinite;
+        overflow: hidden;
+    }
+
+}
+
+.article02 {
+    width: 100vw;
+    height: 150vh;
+    background-color: $accent-hell;
+    padding: 5%;
+
+    .articleText {
+        @include flexRow;
+        justify-content: space-between;
+        gap: 30%;
+
+        h3 {
+            @include fontstyle($fontMain, 5rem, $main-dark, 100%);
+            line-height: 4.4rem;
+        }
+
+        p:first-of-type {
+            @include fontstyle($fontSecond, 1.5rem, $main-dark, 80%);
+            font-weight: 700;
+        }
+
+        p:last-of-type {
+            @include fontstyle($fontSecond, 1rem, $main-dark, 100%);
+            padding-top: 2%;
+        }
+    }
+
+
+    .articlePhotos {
+        height: 100vh;
+        position: relative;
+
+        img:first-of-type {
+            @include imgPositionAbsolute(10%, 5%, auto, auto, 55%);
+        }
+
+        img:last-of-type {
+            @include imgPositionAbsolute(25%, auto, auto, 15%, 30%);
+        }
+    }
+
+}
+
+.fotos {
+    position: relative;
+    width: 100vw;
+    height: 200vh;
+    background-color: $main-hell;
+
+    h2 {
+        @include fontstyle($fontMain, 5rem, $main-dark, 100%)
+    }
+
+    p {
+        @include fontstyle($fontSecond, 1rem, $main-dark, 80%)
+    }
+
+    .mainText {
+        @include imgPositionAbsolute(20%, auto, auto, 30%, 40%);
+    }
+
+    .secondText {
+        @include imgPositionAbsolute(70%, auto, auto, 35%, 25%);
+    }
+
+    .img1 {
+        @include imgPositionAbsolute(-5%, 10%, auto, auto, 22%);
+    }
+
+    .img2 {
+        @include imgPositionAbsolute(8%, auto, auto, 8%, 20%);
+    }
+
+    .img3 {
+        @include imgPositionAbsolute(30%, 0, auto, auto, 15%);
+    }
+
+    .img4 {
+        @include imgPositionAbsolute(45%, auto, auto, 25%, 18%);
+    }
+
+    .img5 {
+        @include imgPositionAbsolute(50%, 30%, auto, auto, 18%);
+    }
+
+    .img6 {
+        @include imgPositionAbsolute(auto, auto, 20%, 0, 15%);
+    }
+
+    .img7 {
+        @include imgPositionAbsolute(auto, 15%, 0, auto, 25%);
+    }
+}
+
+// footer
+
+footer {
+    position: relative;
+    height: 80vh;
+    background-color: $main-dark;
+    padding: 5% 5%;
+    overflow: hidden;
+
+
+
+    p {
+        @include fontstyle($fontSecond, 0.8rem, $main-hell, 70%);
+    }
+
+    .joinUs {
+        padding: 5% 0;
+        @include flexColumn;
+        justify-content: flex-start;
+        gap: 20px;
+        align-items: flex-start;
+
+        p:last-of-type {
+            @include fontstyle($fontSecond, 2rem, $main-hell, 40%);
+        }
+    }
+
+    .copyright {
+        @include flexRow;
+        justify-content: space-between;
+        align-items: center;
+
+        .social {
+            @include flexColumn;
+            gap: 15px;
+
+            p {
+                max-width: 100%;
+            }
+
+            .icons {
+                @include flexRow;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 5%;
+
+                img {
+                    width: 20px;
+                }
+            }
+        }
+    }
+
+    .parteners {
+        img {
+            height: 50px;
+            padding: 2%;
         }
     }
 }
 
-// sec2
-
-.sec2__action {
-    position: relative;
-    height: 120vh;
-
-    figure img {
-        width: 20%;
-        position: absolute;
-
-        .action1 {
-            position: absolute;
-            top: 35%;
-            left: 35%;
-            z-index: 1;
-        }
-        
-    }
+.banner {
+    position: absolute;
+    right: 30%;
+    width: 100vw;
+    background-color: white;
+    transform: translate(45%, 60%) rotate(45deg);
+    border: 1px solid green;
 
     h3 {
-        font-size: 4rem;
-        width: 40%;
-
+        @include fontstyle($fontMain, 3rem, $accent-dark, 100%);
+        animation: movebanner 10s linear infinite;
     }
+
 }
-
-
-
-
-

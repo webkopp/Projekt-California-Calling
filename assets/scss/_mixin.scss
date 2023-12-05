@@ -1,15 +1,25 @@
-// global
-
-@use 'variables' as vari;
-
-
-@mixin headerStyle ($h4, $color, $background) {
-    font-size: $h4;
+@mixin fontstyle($font, $fontSize, $color, $width) {
+    font-family: $font;
+    font-size: $fontSize;
     color: $color;
-    background-color: $background;
+    max-width: $width;
 }
 
-@mixin sectionStyleDark ($color, $background) {
-    color: $color;
-    background-color: $background;
+@mixin flexRow {
+    display: flex;
+}
+
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin imgPositionAbsolute($top, $right, $bottom, $left, $width) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    left: $left;
+    bottom: $bottom;
+    width: $width;
+    height: auto;
 }
