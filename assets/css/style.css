@@ -105,13 +105,21 @@ p, a {
 
 .sec2__action {
   position: relative;
+  height: 120vh;
 }
 .sec2__action figure img {
   width: 20%;
   position: absolute;
 }
+.sec2__action figure img .action1 {
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  z-index: 1;
+}
 .sec2__action h3 {
   font-size: 4rem;
+  width: 40%;
 }
 
 /*# sourceMappingURL=style.css.map */

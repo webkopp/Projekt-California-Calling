@@ -1,8 +1,6 @@
 // links
 @use '_font' as font;
-
 @use '_mixin' as mixi;
-
 @use '_variables' as vari;
 
 // global
@@ -113,14 +111,24 @@ p, a {
 
 .sec2__action {
     position: relative;
+    height: 120vh;
 
     figure img {
         width: 20%;
         position: absolute;
+
+        .action1 {
+            position: absolute;
+            top: 35%;
+            left: 35%;
+            z-index: 1;
+        }
+        
     }
 
     h3 {
         font-size: 4rem;
+        width: 40%;
 
     }
 }
